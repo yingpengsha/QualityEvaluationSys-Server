@@ -1,18 +1,12 @@
 package com.qualityevaluationsys.demo.domain;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @author 
  */
 public class BreakRule implements Serializable {
-    private Integer id;
-
-    /**
-     * 违纪摘要
-     */
-    private String title;
+    private Integer bid;
 
     /**
      * 违纪内容
@@ -20,35 +14,38 @@ public class BreakRule implements Serializable {
     private String content;
 
     /**
-     * 违纪时间
+     * 违纪日期
      */
-    private Date time;
+    private String time;
 
     /**
      * 程度
      */
     private String status;
 
-    private String sno;
+    /**
+     * 学号
+     */
+    private String sid;
 
-    private String reason;
+    /**
+     * 学生姓名
+     */
+    private String sname;
+
+    /**
+     * 学生班级
+     */
+    private String sclass;
 
     private static final long serialVersionUID = 1L;
 
-    public Integer getId() {
-        return id;
+    public Integer getBid() {
+        return bid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public void setBid(Integer bid) {
+        this.bid = bid;
     }
 
     public String getContent() {
@@ -59,11 +56,11 @@ public class BreakRule implements Serializable {
         this.content = content;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -75,20 +72,28 @@ public class BreakRule implements Serializable {
         this.status = status;
     }
 
-    public String getSno() {
-        return sno;
+    public String getSid() {
+        return sid;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
+    public void setSid(String sid) {
+        this.sid = sid;
     }
 
-    public String getReason() {
-        return reason;
+    public String getSname() {
+        return sname;
     }
 
-    public void setReason(String reason) {
-        this.reason = reason;
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public String getSclass() {
+        return sclass;
+    }
+
+    public void setSclass(String sclass) {
+        this.sclass = sclass;
     }
 
     @Override
@@ -103,26 +108,26 @@ public class BreakRule implements Serializable {
             return false;
         }
         BreakRule other = (BreakRule) that;
-        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
+        return (this.getBid() == null ? other.getBid() == null : this.getBid().equals(other.getBid()))
             && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
             && (this.getTime() == null ? other.getTime() == null : this.getTime().equals(other.getTime()))
             && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-            && (this.getSno() == null ? other.getSno() == null : this.getSno().equals(other.getSno()))
-            && (this.getReason() == null ? other.getReason() == null : this.getReason().equals(other.getReason()));
+            && (this.getSid() == null ? other.getSid() == null : this.getSid().equals(other.getSid()))
+            && (this.getSname() == null ? other.getSname() == null : this.getSname().equals(other.getSname()))
+            && (this.getSclass() == null ? other.getSclass() == null : this.getSclass().equals(other.getSclass()));
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
+        result = prime * result + ((getBid() == null) ? 0 : getBid().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
         result = prime * result + ((getTime() == null) ? 0 : getTime().hashCode());
         result = prime * result + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        result = prime * result + ((getSno() == null) ? 0 : getSno().hashCode());
-        result = prime * result + ((getReason() == null) ? 0 : getReason().hashCode());
+        result = prime * result + ((getSid() == null) ? 0 : getSid().hashCode());
+        result = prime * result + ((getSname() == null) ? 0 : getSname().hashCode());
+        result = prime * result + ((getSclass() == null) ? 0 : getSclass().hashCode());
         return result;
     }
 
@@ -132,13 +137,13 @@ public class BreakRule implements Serializable {
         sb.append(getClass().getSimpleName());
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", title=").append(title);
+        sb.append(", bid=").append(bid);
         sb.append(", content=").append(content);
         sb.append(", time=").append(time);
         sb.append(", status=").append(status);
-        sb.append(", sno=").append(sno);
-        sb.append(", reason=").append(reason);
+        sb.append(", sid=").append(sid);
+        sb.append(", sname=").append(sname);
+        sb.append(", sclass=").append(sclass);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

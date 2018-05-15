@@ -3,7 +3,6 @@ package com.qualityevaluationsys.demo.dao;
 import com.qualityevaluationsys.demo.domain.Student;
 import com.qualityevaluationsys.demo.domain.StudentExample;
 import java.util.List;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -15,15 +14,17 @@ public interface StudentMapper {
 
     int deleteByExample(StudentExample example);
 
-    int deleteByPrimaryKey(String sno);
+    int deleteByPrimaryKey(String sid);
 
     int insert(Student record);
 
     int insertSelective(Student record);
 
+    List<Student> selectByCid(Integer cid);
+
     List<Student> selectByExample(StudentExample example);
 
-    Student selectByPrimaryKey(String sno);
+    Student selectByPrimaryKey(String sid);
 
     int updateByExampleSelective(@Param("record") Student record, @Param("example") StudentExample example);
 
@@ -32,4 +33,6 @@ public interface StudentMapper {
     int updateByPrimaryKeySelective(Student record);
 
     int updateByPrimaryKey(Student record);
+
+    List selectall();
 }

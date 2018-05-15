@@ -5,7 +5,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.io.PrintWriter;
 public class AuthInterceptor extends HandlerInterceptorAdapter{
     /**
      *预处理回调方法，实现处理器的预处理（如登录检查）。
@@ -17,12 +17,16 @@ public class AuthInterceptor extends HandlerInterceptorAdapter{
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
                              Object handler) throws Exception {
         System.out.println("-------------------preHandle");
-        // 验证用户是否登陆
-//        String header = request.getHeader("X-Token");
-//        if(header.isEmpty()){
-//            return  false;
-//        }
-
+//         验证用户是否登陆
+        String header = request.getHeader("X-Token");
+        if(header==null||header.isEmpty()) {
+            response.setCharacterEncoding("UTF-8");
+            response.setContentType("application/json; charset=utf-8");
+            PrintWriter out = null ;
+            PrintWriter writer = response.getWriter();
+            writer.write("无效的身份认证");
+            return false;
+        }
         return true;
     }
 

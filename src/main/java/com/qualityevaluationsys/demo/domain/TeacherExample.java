@@ -1,7 +1,6 @@
 package com.qualityevaluationsys.demo.domain;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class TeacherExample {
@@ -265,52 +264,62 @@ public class TeacherExample {
             return (Criteria) this;
         }
 
-        public Criteria andTtimeEqualTo(Date value) {
+        public Criteria andTtimeEqualTo(String value) {
             addCriterion("Ttime =", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeNotEqualTo(Date value) {
+        public Criteria andTtimeNotEqualTo(String value) {
             addCriterion("Ttime <>", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeGreaterThan(Date value) {
+        public Criteria andTtimeGreaterThan(String value) {
             addCriterion("Ttime >", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andTtimeGreaterThanOrEqualTo(String value) {
             addCriterion("Ttime >=", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeLessThan(Date value) {
+        public Criteria andTtimeLessThan(String value) {
             addCriterion("Ttime <", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeLessThanOrEqualTo(Date value) {
+        public Criteria andTtimeLessThanOrEqualTo(String value) {
             addCriterion("Ttime <=", value, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeIn(List<Date> values) {
+        public Criteria andTtimeLike(String value) {
+            addCriterion("Ttime like", value, "ttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtimeNotLike(String value) {
+            addCriterion("Ttime not like", value, "ttime");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtimeIn(List<String> values) {
             addCriterion("Ttime in", values, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeNotIn(List<Date> values) {
+        public Criteria andTtimeNotIn(List<String> values) {
             addCriterion("Ttime not in", values, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeBetween(Date value1, Date value2) {
+        public Criteria andTtimeBetween(String value1, String value2) {
             addCriterion("Ttime between", value1, value2, "ttime");
             return (Criteria) this;
         }
 
-        public Criteria andTtimeNotBetween(Date value1, Date value2) {
+        public Criteria andTtimeNotBetween(String value1, String value2) {
             addCriterion("Ttime not between", value1, value2, "ttime");
             return (Criteria) this;
         }
@@ -515,6 +524,66 @@ public class TeacherExample {
             return (Criteria) this;
         }
 
+        public Criteria andCidIsNull() {
+            addCriterion("Cid is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidIsNotNull() {
+            addCriterion("Cid is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidEqualTo(Integer value) {
+            addCriterion("Cid =", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotEqualTo(Integer value) {
+            addCriterion("Cid <>", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidGreaterThan(Integer value) {
+            addCriterion("Cid >", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidGreaterThanOrEqualTo(Integer value) {
+            addCriterion("Cid >=", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidLessThan(Integer value) {
+            addCriterion("Cid <", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidLessThanOrEqualTo(Integer value) {
+            addCriterion("Cid <=", value, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidIn(List<Integer> values) {
+            addCriterion("Cid in", values, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotIn(List<Integer> values) {
+            addCriterion("Cid not in", values, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidBetween(Integer value1, Integer value2) {
+            addCriterion("Cid between", value1, value2, "cid");
+            return (Criteria) this;
+        }
+
+        public Criteria andCidNotBetween(Integer value1, Integer value2) {
+            addCriterion("Cid not between", value1, value2, "cid");
+            return (Criteria) this;
+        }
+
         public Criteria andUnoIsNull() {
             addCriterion("Uno is null");
             return (Criteria) this;
@@ -572,6 +641,146 @@ public class TeacherExample {
 
         public Criteria andUnoNotBetween(Integer value1, Integer value2) {
             addCriterion("Uno not between", value1, value2, "uno");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelIsNull() {
+            addCriterion("Ttel is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelIsNotNull() {
+            addCriterion("Ttel is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelEqualTo(String value) {
+            addCriterion("Ttel =", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelNotEqualTo(String value) {
+            addCriterion("Ttel <>", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelGreaterThan(String value) {
+            addCriterion("Ttel >", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelGreaterThanOrEqualTo(String value) {
+            addCriterion("Ttel >=", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelLessThan(String value) {
+            addCriterion("Ttel <", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelLessThanOrEqualTo(String value) {
+            addCriterion("Ttel <=", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelLike(String value) {
+            addCriterion("Ttel like", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelNotLike(String value) {
+            addCriterion("Ttel not like", value, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelIn(List<String> values) {
+            addCriterion("Ttel in", values, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelNotIn(List<String> values) {
+            addCriterion("Ttel not in", values, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelBetween(String value1, String value2) {
+            addCriterion("Ttel between", value1, value2, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andTtelNotBetween(String value1, String value2) {
+            addCriterion("Ttel not between", value1, value2, "ttel");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameIsNull() {
+            addCriterion("Cname is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameIsNotNull() {
+            addCriterion("Cname is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameEqualTo(String value) {
+            addCriterion("Cname =", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameNotEqualTo(String value) {
+            addCriterion("Cname <>", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameGreaterThan(String value) {
+            addCriterion("Cname >", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameGreaterThanOrEqualTo(String value) {
+            addCriterion("Cname >=", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameLessThan(String value) {
+            addCriterion("Cname <", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameLessThanOrEqualTo(String value) {
+            addCriterion("Cname <=", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameLike(String value) {
+            addCriterion("Cname like", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameNotLike(String value) {
+            addCriterion("Cname not like", value, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameIn(List<String> values) {
+            addCriterion("Cname in", values, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameNotIn(List<String> values) {
+            addCriterion("Cname not in", values, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameBetween(String value1, String value2) {
+            addCriterion("Cname between", value1, value2, "cname");
+            return (Criteria) this;
+        }
+
+        public Criteria andCnameNotBetween(String value1, String value2) {
+            addCriterion("Cname not between", value1, value2, "cname");
             return (Criteria) this;
         }
     }
